@@ -1,0 +1,25 @@
+[{
+    "_id": 1,
+    "product category": "construction",
+    "quantity": 43,
+    "price_valid" : "27/09/2018",
+    "unit_price" : 54.55
+},{
+    "_id": 2,
+    "product category": "education",
+    "quantity": 152,
+    "price_valid" : "13/09/2021",
+    "unit_price" : 19.97
+},{
+    "_id": 3,
+    "product category": "bodybuilding",
+    "quantity": 152,
+    "price_valid" : "5/04/2021",
+    "unit_price" : 108.78
+},{
+    "_id": 4,
+    "product category": "sports",
+    "quantity": 8504,
+    "price_valid" : "21/11/2019",
+    "unit_price" : 8.99
+}]

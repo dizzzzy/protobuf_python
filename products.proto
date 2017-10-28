@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.";
+option java_outer_classname = "HelloWorldProto";
+option objc_class_prefix = "HLW";
+
+package products;
+
+import "google/api/annotations.proto";
+
+// The greeting service definition.
+service Rfq {
+  // Sends a greeting
+  rpc rfq (QuoteRequest) returns (QuoteReply) {
+    option (google.api.http).get = "/rfq/{message_id}";
+  }
+}
+
+// The request message containing the user's name.
+message QuoteRequest {
+  int32 rfq_id = 1;
+  int32 acc_id = 2;
+  int32 product_num = 3;
+  string product_category = 4;
+  int32 quantity = 5;
+}
+
+// The response message containing the greetings
+message QuoteReply {
+  double unit_price = 1;
+  string price_validation_period = 2;
+}
+
+message Product {
+  int32 product_num = 1;
+  string product_category = 2;
+  int32 quantity = 3;
+  string price_validation_period = 4;
+  double unit_price = 5;
+}
+
+message GetMessageRequest {
+  message SubMessage {
+    string subfield = 1;
+  }
+  string message_id = 1; // mapped to the URL
+  int64 revision = 2;    // becomes a parameter
+  SubMessage sub = 3;    // `sub.subfield` becomes a parameter
+}
+
