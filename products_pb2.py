@@ -13,16 +13,14 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='products.proto',
   package='products',
   syntax='proto3',
-  serialized_pb=_b('\n\x0eproducts.proto\x12\x08products\x1a\x1cgoogle/api/annotations.proto\"o\n\x0cQuoteRequest\x12\x0e\n\x06rfq_id\x18\x01 \x01(\x05\x12\x0e\n\x06\x61\x63\x63_id\x18\x02 \x01(\x05\x12\x13\n\x0bproduct_num\x18\x03 \x01(\x05\x12\x18\n\x10product_category\x18\x04 \x01(\t\x12\x10\n\x08quantity\x18\x05 \x01(\x05\"A\n\nQuoteReply\x12\x12\n\nunit_price\x18\x01 \x01(\x01\x12\x1f\n\x17price_validation_period\x18\x02 \x01(\t\"\x7f\n\x07Product\x12\x13\n\x0bproduct_num\x18\x01 \x01(\x05\x12\x18\n\x10product_category\x18\x02 \x01(\t\x12\x10\n\x08quantity\x18\x03 \x01(\x05\x12\x1f\n\x17price_validation_period\x18\x04 \x01(\t\x12\x12\n\nunit_price\x18\x05 \x01(\x01\"\x8e\x01\n\x11GetMessageRequest\x12\x12\n\nmessage_id\x18\x01 \x01(\t\x12\x10\n\x08revision\x18\x02 \x01(\x03\x12\x33\n\x03sub\x18\x03 \x01(\x0b\x32&.products.GetMessageRequest.SubMessage\x1a\x1e\n\nSubMessage\x12\x10\n\x08subfield\x18\x01 \x01(\t2U\n\x03Rfq\x12N\n\x03rfq\x12\x16.products.QuoteRequest\x1a\x14.products.QuoteReply\"\x19\x82\xd3\xe4\x93\x02\x13\x12\x11/rfq/{message_id}B,\n\x11io.grpc.examples.B\x0fHelloWorldProtoP\x01\xa2\x02\x03HLWb\x06proto3')
-  ,
-  dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
+  serialized_pb=_b('\n\x0eproducts.proto\x12\x08products\"o\n\x0cQuoteRequest\x12\x0e\n\x06rfq_id\x18\x01 \x01(\x05\x12\x0e\n\x06\x61\x63\x63_id\x18\x02 \x01(\x05\x12\x13\n\x0bproduct_num\x18\x03 \x01(\x05\x12\x18\n\x10product_category\x18\x04 \x01(\t\x12\x10\n\x08quantity\x18\x05 \x01(\x05\"A\n\nQuoteReply\x12\x12\n\nunit_price\x18\x01 \x01(\x01\x12\x1f\n\x17price_validation_period\x18\x02 \x01(\t\"\x7f\n\x07Product\x12\x13\n\x0bproduct_num\x18\x01 \x01(\x05\x12\x18\n\x10product_category\x18\x02 \x01(\t\x12\x10\n\x08quantity\x18\x03 \x01(\x05\x12\x1f\n\x17price_validation_period\x18\x04 \x01(\t\x12\x12\n\nunit_price\x18\x05 \x01(\x01\x32<\n\x03Rfq\x12\x35\n\x03rfq\x12\x16.products.QuoteRequest\x1a\x14.products.QuoteReply\"\x00\x42,\n\x11io.grpc.examples.B\x0fHelloWorldProtoP\x01\xa2\x02\x03HLWb\x06proto3')
+)
 
 
 
@@ -81,8 +79,8 @@ _QUOTEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=58,
-  serialized_end=169,
+  serialized_start=28,
+  serialized_end=139,
 )
 
 
@@ -119,8 +117,8 @@ _QUOTEREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=171,
-  serialized_end=236,
+  serialized_start=141,
+  serialized_end=206,
 )
 
 
@@ -178,91 +176,13 @@ _PRODUCT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=238,
-  serialized_end=365,
+  serialized_start=208,
+  serialized_end=335,
 )
 
-
-_GETMESSAGEREQUEST_SUBMESSAGE = _descriptor.Descriptor(
-  name='SubMessage',
-  full_name='products.GetMessageRequest.SubMessage',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='subfield', full_name='products.GetMessageRequest.SubMessage.subfield', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=480,
-  serialized_end=510,
-)
-
-_GETMESSAGEREQUEST = _descriptor.Descriptor(
-  name='GetMessageRequest',
-  full_name='products.GetMessageRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='message_id', full_name='products.GetMessageRequest.message_id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='revision', full_name='products.GetMessageRequest.revision', index=1,
-      number=2, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='sub', full_name='products.GetMessageRequest.sub', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[_GETMESSAGEREQUEST_SUBMESSAGE, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=368,
-  serialized_end=510,
-)
-
-_GETMESSAGEREQUEST_SUBMESSAGE.containing_type = _GETMESSAGEREQUEST
-_GETMESSAGEREQUEST.fields_by_name['sub'].message_type = _GETMESSAGEREQUEST_SUBMESSAGE
 DESCRIPTOR.message_types_by_name['QuoteRequest'] = _QUOTEREQUEST
 DESCRIPTOR.message_types_by_name['QuoteReply'] = _QUOTEREPLY
 DESCRIPTOR.message_types_by_name['Product'] = _PRODUCT
-DESCRIPTOR.message_types_by_name['GetMessageRequest'] = _GETMESSAGEREQUEST
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 QuoteRequest = _reflection.GeneratedProtocolMessageType('QuoteRequest', (_message.Message,), dict(
@@ -286,21 +206,6 @@ Product = _reflection.GeneratedProtocolMessageType('Product', (_message.Message,
   ))
 _sym_db.RegisterMessage(Product)
 
-GetMessageRequest = _reflection.GeneratedProtocolMessageType('GetMessageRequest', (_message.Message,), dict(
-
-  SubMessage = _reflection.GeneratedProtocolMessageType('SubMessage', (_message.Message,), dict(
-    DESCRIPTOR = _GETMESSAGEREQUEST_SUBMESSAGE,
-    __module__ = 'products_pb2'
-    # @@protoc_insertion_point(class_scope:products.GetMessageRequest.SubMessage)
-    ))
-  ,
-  DESCRIPTOR = _GETMESSAGEREQUEST,
-  __module__ = 'products_pb2'
-  # @@protoc_insertion_point(class_scope:products.GetMessageRequest)
-  ))
-_sym_db.RegisterMessage(GetMessageRequest)
-_sym_db.RegisterMessage(GetMessageRequest.SubMessage)
-
 
 DESCRIPTOR.has_options = True
 DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\021io.grpc.examples.B\017HelloWorldProtoP\001\242\002\003HLW'))
@@ -311,8 +216,8 @@ _RFQ = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   options=None,
-  serialized_start=512,
-  serialized_end=597,
+  serialized_start=337,
+  serialized_end=397,
   methods=[
   _descriptor.MethodDescriptor(
     name='rfq',
@@ -321,7 +226,7 @@ _RFQ = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_QUOTEREQUEST,
     output_type=_QUOTEREPLY,
-    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002\023\022\021/rfq/{message_id}')),
+    options=None,
   ),
 ])
 _sym_db.RegisterServiceDescriptor(_RFQ)

@@ -7,13 +7,10 @@ option objc_class_prefix = "HLW";
 
 package products;
 
-import "google/api/annotations.proto";
-
 // The greeting service definition.
 service Rfq {
   // Sends a greeting
   rpc rfq (QuoteRequest) returns (QuoteReply) {
-    option (google.api.http).get = "/rfq/{message_id}";
   }
 }
 
@@ -39,13 +36,3 @@ message Product {
   string price_validation_period = 4;
   double unit_price = 5;
 }
-
-message GetMessageRequest {
-  message SubMessage {
-    string subfield = 1;
-  }
-  string message_id = 1; // mapped to the URL
-  int64 revision = 2;    // becomes a parameter
-  SubMessage sub = 3;    // `sub.subfield` becomes a parameter
-}
-

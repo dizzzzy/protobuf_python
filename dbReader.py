@@ -23,6 +23,13 @@ def read_products_database():
       product_list.append(product)
   return product_list
 
+def get_json_database():
+  json_product_list = []
+  with open("products.json") as product_db_file:
+    json_product_list = json.load(product_db_file)
+  return json_product_list
+
+
 
 
 # message Product {
