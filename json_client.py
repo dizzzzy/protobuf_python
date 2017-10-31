@@ -2,8 +2,14 @@
 
 import requests
 
-data = {'key': 1}
-# POST some form-encoded data:
-print('json')
-response = requests.get(url='http://127.0.0.1:5000/rfq', params=data)
-print(response)
+# GET some form-encoded data:
+response = requests.get(url='http://127.0.0.1:5002/rfq/1&2&4&sports&5')
+print(response.json())
+response = requests.get(url='http://127.0.0.1:5002/rfq/1&2&4&education&5')
+print(response.json())
+response = requests.get(url='http://127.0.0.1:5002/rfq/1&2&4&sports&20000')
+print(response.json())
+response = requests.get(url='http://127.0.0.1:5002/rfq/1&2&4&education&5')
+print(response.json())
+response = requests.get(url='http://127.0.0.1:5002/rfq/1&2&4&education&5')
+print(response.json())
